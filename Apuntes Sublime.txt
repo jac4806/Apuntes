@@ -1,0 +1,44 @@
+Instalar paquete: Pulsar Ctrl + Shift + P ‘Install Package’. 
+
+Desinstalar paquete: pulsamos Ctrl + Shift + P ‘Remove Package’
+
+Buscar / Buscar y reemplazar: pulsar CMD + Shift + F
+
+Combinación de teclas más usadas:
+
+CTRL + K : Borra la línea actual.
+CTRL + X : Corta la línea actual.
+CTRL + SHIFT + ARRIBA : Mueve el texto resaltado arriba.
+Ctrl + Shift + ABAJO : Mueve el texto resaltado abajo.
+CTRL + W : Cierra la pestaña actual.
+CTRL + KK : Borra todo desde el cursor hasta el final de la línea.
+CTRL + F : Buscar.
+CTRL + H : Buscar y reemplazar.
+CTRL + KU : Convertir el texto seleccionado a mayúsculas.
+CTRL + KL : Convertir el texto seleccionado a minúsculas.
+CTRL + KB : Alternar la barra lateral.
+CTRL + [ : Indentar la línea actual.
+CTRL + ] : Sangrar la línea actual.
+CTRL + / : Comentar / Descomentar la línea o la selección actual.
+ALT + SHIFT + [NÚMERO] : Divide la pantalla en X columnas (máximo 4)
+CTRL + 0 : Centra la barra lateral.
+CTRL + 1-4 : Centra la columna 1-4.
+CTRL + SHIFT + 1-4 : Mueve el archivo a la columna 1-4.
+**************************************************************
+shortcut for SublimeREPL
+Go to Preferences > Key Bindings - User
+
+Add bellow lines to the opened file between brackets:
+
+{ "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":
+{
+       "id": "repl_python_run",
+       "file": "config/Python/Main.sublime-menu"
+}}
+
+*****************************************************************************************************
+Instalar GITHub
+    sudo add-apt-repository ppa:git-core/ppa 
+    sudo apt update
+    sudo apt install git
+*****************************************************************************************************

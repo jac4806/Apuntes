@@ -1,0 +1,114 @@
+Permisos  disco NTFS
+nosuid,nodev,nofail,x-gvfs-show
+
+Informacion de todo tu equio
+inxi -Fxnzr
+
+Informacion del sistema "nombre del euipo"
+        sudo hostnamectl
+
+Informacion del isitema operativo
+        apt-get install lsb-core ;por si no esta instalado el modulo LSB
+        sudo lsb_release -c
+        sudo uname -a
+
+Version de escritorio
+        env | grep DESKTOP_SESSION=
+
+
+***********************************************************************************************************
+Actualiza Firmware
+    sudo rpi-update
+
+Restaurar Firmware original Raspberry
+        sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel
+***********************************************************************************************************
+https://www.luisllamas.es/actualizar-version-raspbian-raspberry-pi/
+
+Le damos permisos de ejecución con:
+        sudo chmod +x /usr/local/bin/NombreFichero
+
+Activar arranque de Rasberry Pi desde USB
+        sudo apt-get update && sudo apt-get upgrade
+        echo program_usb_boot_mode=1 | sudo tee -a /boot/config.txt
+        sudo reboot
+        vcgencmd otp_dump | grep 17:
+
+        Resultado 17:3020000a
+
+***********************************************************************************************************
+
+Instalar demonios aMule
+        aptitude install amule-daemon amule-utils-gui
+        amuled -f           iniciar Amule
+        amuled -e           introducir contrseña 
+
+Finalizar aMule
+        sudo killall amuled  
+***********************************************************************************************************
+Instalar paquetes .deb
+        su
+        apt-get update
+        dpkg -i *.deb
+        apt-get install -f
+***********************************************************************************************************
+Instalar paquetes .tar.gz
+
+    cd carpetadondeestéelarchivo
+o
+    cd “carpeta donde esté el archivo”
+Dentro descomprimimos el archivo
+    tar -zxvf nombredelarchivo.tar.gz
+
+    tar -jxvf nombredelarchivo.tar.bz2
+Configuramos
+    ./configure
+Hacemos make (compilamos)
+    make
+Ahora make install
+    make install
+***********************************************************************************************************
+Cambiar permisos carpeta linux de forma recursiva el comando que se utiliza es combinándolo con el comando linux find. Por ejemplo:
+
+        find /var/www/html/ -type d -exec chmod 755 {} \;
+
+El comando para poder modificar los permisos de los archivos de forma recursiva es por ejemplo:
+
+        find /var/www/html/ -type f -exec chmod 644 {} \;
+***********************************************************************************************************
+Actualizar Grub: 
+        sudo update-grub2
+Implementar los cambios     
+    sudo update-initramfs -u -k all
+***********************************************************************************************************
+
+Isntalar Grub Customizer
+
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+
+sudo apt-get update
+
+sudo apt-get install grub-customizer
+***********************************************************************************************************
+instalar paquetes python
+        pip3 install nombrepaquete.tar.gz
+
+desinstalar
+        pip3 unistall nombrepaquete
+***********************************************************************************************************
+Revisar sistema
+Buscar particion del sistema
+    fdisk -l
+Utilizar el comando fsck, que es un programa que reconoce todos los errores de partición y los arregla
+    sudo fsck /dev/sd...unidad del sitema
+
+Comprobar cuánto tarda en arrancar tu sistema con el siguiente comando:
+    systemd-analyze
+Y si quieres saber cuáles son los servicios que más demoran el arranque, le añades la siguiente opción:
+    systemd-analyze blame
+
+***********************************************************************************************************
+Instalar SQlite Browser
+    sudo apt-get update
+    sudo apt-get install sqlitebrowser
+***********************************************************************************************************

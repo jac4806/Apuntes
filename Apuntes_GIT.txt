@@ -1,0 +1,91 @@
+Instalar Git en Linux
+    sudo add-apt-repository ppa:git-core/ppa
+    sudo apt update
+    sudo  apt install git
+
+Configurar
+
+    git config --global user.name "....."
+    git config --global user.email "..."
+
+Verificar configuración:    git config --list
+
+Iniciar GIT
+Ejecutar dentro de tu directorio:     git ini
+
+Para teber ficheros escondidos, podemos crear un directorio llamado:    .gitignore
+donde añadiremos los ficheros que no queramos que se vean.
+
+Añadir comentarios commit:     git commit
+
+Añadimos ficheros :    git add "nombre fichero"
+
+Ver el estado :    git status
+
+Añadir todos los ficheros que no estan en el commit:   git add -A
+
+Borrar ficheros :    git rm "nombre fichero"
+
+Añadir al commit con un comentariuo:   gitpull  "Mi primer GIT
+
+Historial:   git log
+
+Bajar todo los ficheros desde GitHub :   git clone https://github.com/jac4806/BDPeatge.git
+
+Mostrar las modificaciones de ficheros :  git diff
+
+Subir ficheros :            git push origin master
+
+Bajar ficheros :            git pull origin master
+
+Crear rama :                git branch "Nombre Rama"
+
+Entrar en la rama :         git checkout "Nombre Rama"
+
+Ver las Ramas locales :     git branch --list
+
+Subir fichero de la rama : git push -u origin "Nombre Rama"
+
+Mostrar todas las ramas :   git branch -a
+
+Unificar Ramas con la Master:
+Pasamos a la rama Master :              git checkout master   
+Bajamos la master :                     git pull origin master
+Vemos las ramas activas :               git branch --merged
+Unimos con la master :                  git merge "Nombre Rama"
+Subimos nueva master :                  git push origin master
+
+Borrar Ramas en la web :  git push origin --deleted "Nombre Rama"
+
+Borrar Ramas en PC :      git branch -d "Nombre Rama"
+
+Cambiar nombre Rama
+Entramos en la rama:    git checkout "Rama"
+Nuevo nombre:           git branch -m "Nuevo Nombre" 
+También puedes cambiar el nombre de una rama local desde otra rama :
+        git checkout master
+        git branch -m old-name new-name
+Listar Ramas locales y Remotas: git branch -a
+
+*******************************************************************************************************
+1º.-Traer los cambios que están en el repositorio remoto (github):
+	git pull origin Desarrollo
+
+2º.-Cuando hagas modificaciones, añade los cambios al repositorio:
+	git add 
+	git commit
+
+3º_Una vez hecho, sube los cambios al repositorio remoto que está en github:
+	git push origin RAMA
+
+4º.-Cuando llegues a casa, solo necesitas traer los cambios que están en el repositorio remoto (github):
+	git pull origin Desarrollo
+***************************************************************************************************
+
+
+
+
+ 
+
+
+    

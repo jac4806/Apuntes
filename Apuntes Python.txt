@@ -1,0 +1,61 @@
+Instalar PIP
+En linux:
+		sudo apt-get install python3-pip
+En Windows:	
+1.-Descargue el script del instalador get-pip.py.
+2.-Abra el símbolo del sistema y navegue hasta el archivo get-pip.py.
+3.-Ejecute el siguiente comando: python get-pip.py			
+
+Saber si un moduo esta instalado
+
+https://es.stackoverflow.com/questions/69860/c%C3%B3mo-saber-si-un-m%C3%B3dulo-esta-instalado
+
+Recuerda que si lo que quieres es tener en otra máquina todo instalado
+igual que en la máquina original, lo puedes hacer con:
+
+$ pip freeze > requisitos.txt
+
+$ sudo pip install -r requisitos.txt
+
+el primer comando en la máquina antigua y el segundo en la nueva. 
+
+
+Desde la terminal puedes ver si el módulo está instalado con PIP:
+    $ python -m pip show numpy
+
+Listar los módulos instalados tienes múltiples opciones:
+        help('modules')
+        help('modules package')
+Si quieres conocer los módulos instalados via pip puedes:
+
+    pip freeze desde la consola(cmd)
+    pip list desde la consola(cmd)
+
+manual PIP
+    man pip
+*******************************************************************************************************
+Instalar Tkinter
+    sudo dpkg --configure -a
+    sudo apt-get install python3-tk
+*******************************************************************************************************
+Instalar PySide
+    sudo apt-get install pyside
+*******************************************************************************************************
+PyQt5
+    sudo apt-get install qtcreator pyqt5-dev-tools
+    sudo apt-get install python3-pyqt5
+    sudo apt-get install qttools5-dev-tools
+
+*******************************************************************************************************
+Instalar SQlite Browser
+    sudo apt-get update
+    sudo apt-get install sqlitebrowser
+*******************************************************************************************************
+Instalar SQLite3
+    sudo pip3 install pysqlite3
+*******************************************************************************************************
+Instalar MySQL
+    pip3 install PyMySQL
+
+
+

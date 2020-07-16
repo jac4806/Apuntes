@@ -1,0 +1,8 @@
+Estoy cambiando este archivo....
+Configuracion Visual Code
+
+Adaptar la lineas a la pantalla sin salto de linea.
+
+    editor:WordWrap a "on"
+
+
