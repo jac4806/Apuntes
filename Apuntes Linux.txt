@@ -1,3 +1,50 @@
+Actualizar Sistema.
+Creamos fichero:
+
+        sudo gedit /usr/local/bin/update
+
+Pegamos lo siguiente y guardamos cambios:
+
+        #!/bin/bash
+        sudo apt update && sudo apt upgrade && sudo apt full-upgrade
+
+Ahora le damos permisos de ejecución con:
+
+    sudo chmod +x /usr/local/bin/update
+
+Limpiar Sistema.
+Creamos fichero:
+
+        sudo gedit /usr/local/bin/clean
+
+Pegamos lo siguiente y guardamos cambios:
+
+        #!/bin/bash
+        sudo apt clean && sudo apt autoclean && sudo apt autoremove
+
+
+Ahora le damos permisos de ejecución con:
+
+        sudo chmod +x /usr/local/bin/clean
+
+Corregir Paquetes.
+Creamos fichero:
+
+        sudo gedit /usr/local/bin/fix
+
+Pegamos lo siguiente y guardamos cambios:
+
+        #!/bin/bash
+        sudo dpkg --configure -a
+        sudo apt clean && sudo apt autoclean && sudo apt autoremove
+        sudo apt-get update --fix-missing
+        sudo apt-get install -f
+
+Ahora le damos permisos de ejecución con:
+
+        sudo chmod +x /usr/local/bin/fix
+
+***********************************************************************************************************
 Permisos  disco NTFS
 nosuid,nodev,nofail,x-gvfs-show
 
@@ -112,3 +159,7 @@ Instalar SQlite Browser
     sudo apt-get update
     sudo apt-get install sqlitebrowser
 ***********************************************************************************************************
+Montar USB
+	sudo mount -t vfat /dev/sdb1 /mnt/
+cargar el módulo «usb_storage» al kernel
+	sudo modprobe usb-storage
